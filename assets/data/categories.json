@@ -1,0 +1,22 @@
+[
+    {
+        "id":"1",
+        "nazivKat":"Apple"
+    },
+    {
+        "id":"2",
+        "nazivKat":"HP"
+    },
+    {
+        "id":"3",
+        "nazivKat":"Dell"
+    },
+    {
+        "id":"4",
+        "nazivKat":"Lenovo"
+    },
+    {
+        "id":"5",
+        "nazivKat":"Acer"
+    }
+]

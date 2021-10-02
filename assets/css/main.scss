@@ -1,0 +1,801 @@
+$backgroundColor1 : rgb(19, 145, 107);
+$backgroundColor2: rgb(52,52,52);
+$backgroundColor2Opp1: rgba(52,52,52, 0.7);
+$backgroundColor2Opp2: rgba(52,52,52, 0.4);
+$textColor1: #fff;
+$textColor2: #333;
+$textColor3: rgb(207, 178, 12);
+$navHeight : 65px;
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    outline: none;
+    list-style-type: none;
+    text-decoration: none;
+}
+h2{
+    padding: 20px 0px;
+}
+select{
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+.forms{
+    width: 50%;
+    padding: 10px;
+    input[type="text"]{
+        margin-top: 20px;
+    }
+    button{
+        margin-top: 10px;
+    }
+}
+#pretraga{
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    &::placeholder{
+        color: $backgroundColor1;
+    }
+}
+.content{
+    width: 1522.39px;
+    margin: 0 auto;
+}
+.flexed{
+    width: 100%;
+    display: flex;
+}
+.form{
+    width: 100%;
+    padding: 10px;
+    .form-wrap{
+        width: 100%;
+        margin-bottom: 10px;
+        label{
+            display: block;
+            padding: 5px 0;
+            color: #333;
+        }
+        .input-field{
+            width: 100%;
+            height: 50px;
+            padding: 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            &:focus{
+                box-shadow: 0px 1px 12px 2px $backgroundColor1;
+                transition: box-shadow 0.4s ease-in-out;
+            }
+        }
+        textarea.input-field{
+            height: 200px;
+            padding: 10px;
+            resize: none;
+        }
+    }
+}
+#SubmitMessage{
+    padding: 0 10px;
+}
+.button{
+    width: 200px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.button.primary{
+    background: $backgroundColor1;
+    color: $textColor1;
+    border-color: $backgroundColor1;
+    &:hover{
+        box-shadow: 1px 1px 4px $backgroundColor2Opp1;
+        transition: box-shadow 0.4s ease-in;
+    }
+}
+.product-modal{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $backgroundColor2Opp2;
+    overflow: hidden;
+    z-index: 9999;
+    .modal-window{
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        right: 10%;
+        bottom: 10%;
+        background: #fff;
+        overflow: hidden;
+        .close-button{
+            font-size: 50px;
+            position: absolute;
+            right: 10px;
+            &:hover{
+                cursor: pointer;
+                color: #333;
+            }
+        }
+        .modal-header{
+            width: 100%;
+            padding: 20px;
+            h3{
+                font-size: 30px;
+            }
+        }
+        .modal-body{
+            display: flex;
+            flex-wrap: wrap;
+            .left{
+                width: 50%;
+                text-align: center;
+                img{
+                    max-width: 70%;
+                }
+                overflow-y: auto;
+            }
+            .right{
+                width: 50%;
+                p{
+                    padding: 5px 0;
+                    font-size: 14px;
+                    span{
+                        font-weight: bold;
+                    }
+                }
+                p.ocena{
+                    font-size: 19px;
+                    color: $textColor3;
+                    padding: 10px 0;
+                }
+                p.cena{
+                    padding: 20px 0;
+                    position: relative;
+                    font-size: 22px;
+                    background: $backgroundColor1;
+                    color: $textColor1;
+                    text-align: center;
+                    box-shadow: 1.5px 1.5px 4px #999;
+                    &::after{
+                        position: absolute;
+                        width: 20px;
+                        height: 100%;
+                        content: "";
+                        background: $backgroundColor1;
+                        top: 0;
+                        right: -20px;
+                    }
+                }
+            }
+        }
+    }
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    padding-top: 65px;
+}
+#topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $backgroundColor2;
+    padding: 4px 0;
+    z-index: 9999;
+    .content{
+        display: flex;
+        padding: 4px 0;
+        align-items: center;
+    }
+    
+    #prikazi{
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        padding: 3px;
+        div{
+            width: 100%;
+            height: 3px;
+            margin: 3px auto;
+            background-color: $textColor1;
+        }
+        &:hover{
+            cursor: pointer;
+            div{
+                opacity: 0.8;
+            }
+        }
+    }
+    #logo{
+        padding: 10px 40px;
+        a{
+            color: $textColor1;
+            &:hover{
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+
+#navbar{
+    position: fixed;
+    top: $navHeight;
+    left: -300px;
+    width: 300px;
+    height: calc(100% - 65px);
+    background: $backgroundColor2Opp1;
+    transition: left 0.4s;
+    z-index: 999;
+    ul{
+        width: 100%;
+        text-align: center;
+        li{
+            a{
+                display: block;
+                padding: 40px;
+                font-size: 16px;
+                border-bottom: 2px solid $backgroundColor2Opp2;
+                color: #fff;
+                &:hover{
+                    background-color: $backgroundColor1;
+                }
+                i{
+                    display: block;
+                    font-size: 50px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+@keyframes slider{
+    0%{
+        left: -15000px;
+    }
+    5%{
+        left: 0px;
+    }
+    95%{
+        left: 0px;
+    }
+    100%{
+        left: 15000px;
+    }
+}
+#omot{
+    width: 100%;
+    margin: 10px auto 0 auto;
+    transition: padding 0.4s;
+    header{
+        width: 960px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        .inner-header{
+            display: flex;
+            position: absolute;
+            left: 0;
+            transition: left 0.4s ease-in;
+            .header-content{
+                position: relative;
+                .header-content-text{
+                    width: 100%;
+                    position: absolute;
+                    top: 30%;
+                    text-align: center;
+                    color: $textColor1;
+                    padding: 5px;
+                    background-color: $backgroundColor2Opp2;
+                    h2{
+                        font-size: 29px;
+                        padding: 10px;
+                    }
+                    p{
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+        .arrow{
+            position: absolute;
+            z-index: 1;
+            width: 5%;
+            height: 100%;
+            background: $backgroundColor2Opp1;
+            font-size: 50px;
+            color: #fff;
+            i{
+                position: absolute;
+                top: 40%;
+                width: 100%;
+                text-align: center;
+            }
+            &:hover{
+                background: $backgroundColor2Opp2;
+                transition: backgorund 0.6s;
+                cursor: pointer;
+            }
+        }
+        .arrow.arrow-right{
+            right: 0;
+        }
+    }
+    #side-form{
+        width: 562px;
+        h2{
+            padding: 10px;
+        }
+    }
+    section{
+        h2{
+            padding: 20px 0;
+            border-bottom: 1px solid $backgroundColor2;
+            margin-bottom: 20px;
+        }
+    }
+    #prikazProizvoda{
+        padding: 20px 0;
+    }
+    .karte{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .karta{
+            width: 24%;
+            height: 300px;
+            margin: 4px;
+            padding: 10px;
+            box-shadow: 2px 2px 8px #999;
+            display: flex;
+            flex-wrap: wrap;
+            z-index: 1;
+            .karta-image{  
+                width: 40%; 
+                z-index: 2;
+                img{
+                    width: 100%;
+                    height: auto;
+                    z-index: 2;
+                }
+            }
+            .karta-text{
+                width: 60%;
+                padding: 3px;
+                text-align: center;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: relative;
+                h4, p{
+                    padding: 5px 0;
+                }
+                h4{
+                    font-size: 24px;
+                }
+                .cena{
+                    font-size: 19px;
+                    font-weight: bold;
+                    color: $backgroundColor1;
+                    position: absolute;
+                    width: 100%;
+                    bottom: 0;
+                    background: #ccc;
+                }
+                .ocena{
+                    font-size: 16px;
+                    color: $textColor3;
+                    font-weight: bold;
+                    position: absolute;
+                    right: 0px;
+                    bottom: 30px;
+                    z-index: 3;
+                }
+                small{
+                    display: block;
+                    padding: 2px;
+                    text-align: left;
+                    font-size: 10px;
+                    span{
+                        font-weight: bold;
+                    }
+                }
+            }
+            &:hover{
+                z-index: 2;
+                background: #fff;
+                cursor: pointer;
+                transform: scale(1.05);
+                transition: transform 0.4s;
+            }
+        }
+    }
+    #footer{
+        width: 100%;
+        padding: 20px;
+        background: $backgroundColor2;
+        color: #fff;
+        text-align: center;
+        margin-top: 20px;
+        #social{
+            padding: 10px;
+            a{
+                display: inline-block;
+                color: #fff;
+                font-size: 26px;
+                padding: 5px 30px;
+                transition: color 0.4s;
+            }
+            .facebook{
+                &:hover{
+                    color: rgb(21, 95, 206);
+                }
+            }
+            .twitter{
+                &:hover{
+                    color: rgb(23, 174, 194);
+                }
+            }
+            .instagram{
+                &:hover{
+                    color: rgb(175, 8, 64);
+                }
+            }
+        }
+        ul{
+            padding: 10px;
+            li{
+                display: inline;
+                a{
+                    display: inline-block;
+                    padding: 5px 20px;
+                    color: #fff;
+                    font-size: 15px;
+                    &:hover{
+                        color: #999;
+                    }
+                }
+            }
+        }
+        p{
+            padding: 10px;
+        }
+    }
+}
+@media screen and(max-width: 1700px){
+    .content{
+        width: 1400px;
+    }
+}
+@media screen and(max-width: 1500px){
+    .content{
+        width: 70%;
+    }
+    #omot{
+        header{
+            .inner-header{
+                .header-content{
+                    position: relative;
+                    .header-content-text{
+                        padding: 0 10px;
+                        text-align: left;
+                        h2{
+                            font-size: 24px;
+                            padding: 10px 30px;
+                        }
+                        p{
+                            font-size: 14px;
+                            width: 50%;
+                            padding: 5px 30px;
+                            word-break: keep-all;
+                        }
+                    }
+                }
+            }
+            .arrow{
+                width: 30px;
+            }
+        }    
+        .karte{
+            .karta{
+                width: 33%;
+                height: 200px;
+
+                .karta-text{
+                    h4{
+                        font-size: 18px;
+                    }
+                    .cena{
+                        font-size: 15px;
+                    }
+                    .ocena{
+                        font-size: 13px;
+                    }
+                    small{
+                        font-size: 8px;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+            }
+        }
+        }
+    }
+}
+@media screen and(max-width: 1200px){
+    #omot{
+        header{
+            .inner-header{
+                .header-content{
+                    position: relative;
+                    .header-content-text{
+                        padding: 0 10px;
+                        text-align: left;
+                        h2{
+                            font-size: 21px;
+                            padding: 10px 30px;
+                        }
+                        p{
+                            font-size: 12px;
+                            width: 30%;
+                            padding: 5px 30px;
+                            word-break: keep-all;
+                        }
+                    }
+                }
+            }
+            .arrow{
+                width: 30px;
+            }
+        }
+        .karte{
+            .karta{
+                width: 48%;
+                height: 200px;
+                .karta-image{
+                    overflow: hidden;
+                }
+                .karta-text{
+                    h4{
+                        font-size: 18px;
+                    }
+                    .cena{
+                        font-size: 15px;
+                    }
+                    .ocena{
+                        font-size: 13px;
+                    }
+                    small{
+                        font-size: 8px;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+            }
+        }
+        }
+    }
+}
+@media screen and(max-width: 800px){
+    .product-modal{
+        .modal-window{
+            .close-button{
+                font-size: 35px;
+            }
+            .modal-header{
+                width: 100%;
+                padding: 10px;
+                h3{
+                    font-size: 24px;
+                }
+            }
+            .modal-body{
+                display: block;
+                .left{
+                    width: 100%;
+                }
+                .right{
+                    width: 100%;
+                    padding: 10px;
+                    p{
+                        padding: 3px 0;
+                        font-size: 12px;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                    p.ocena{
+                        font-size: 16px;
+                        padding: 5px 0;
+                    }
+                    p.cena{
+                        padding: 10px 0;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    #omot{
+        .flexed{
+            display: block;
+        }
+        header{
+            width: 100%;
+            .inner-header{
+                width: 100%;
+            }
+        }
+        #side-form{
+            width: 100%;
+        }
+        .karte{
+            .karta{
+                width: 90%;
+                height: 200px;
+
+                .karta-text{
+                    h4{
+                        font-size: 16px;
+                    }
+                    .cena{
+                        font-size: 13px;
+                    }
+                    .ocena{
+                        font-size: 11px;
+                    }
+                    small{
+                        font-size: 8px;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        #footer{
+            padding: 10px;
+            #social{
+                padding: 5px;
+                a{
+                    display: inline-block;
+                    color: #fff;
+                    font-size: 18px;
+                    padding: 5px 20px;
+                    transition: color 0.4s;
+                }
+                .facebook{
+                    &:hover{
+                        color: rgb(21, 95, 206);
+                    }
+                }
+                .twitter{
+                    &:hover{
+                        color: rgb(23, 174, 194);
+                    }
+                }
+                .instagram{
+                    &:hover{
+                        color: rgb(175, 8, 64);
+                    }
+                }
+            }
+            ul{
+                padding: 10px;
+                li{
+                    display: inline;
+                    a{
+                        display: inline-block;
+                        padding: 5px 15px;
+                        color: #fff;
+                        font-size: 13px;
+                        &:hover{
+                            color: #999;
+                        }
+                    }
+                }
+            }
+            p{
+                padding: 10px;
+            }
+        }
+    }
+}
+@media screen and(max-width: 500px){
+    .product-modal{
+        .modal-window{
+            .close-button{
+                font-size: 35px;
+            }
+            .modal-header{
+                width: 100%;
+                padding: 10px;
+                h3{
+                    font-size: 18px;
+                }
+            }
+            .modal-body{
+                display: block;
+                .left{
+                    width: 100%;
+                }
+                .right{
+                    width: 100%;
+                    padding: 10px;
+                    p{
+                        padding: 3px 0;
+                        font-size: 12px;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                    p.ocena{
+                        font-size: 16px;
+                        padding: 5px 0;
+                    }
+                    p.cena{
+                        padding: 10px 0;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    #omot{
+        #footer{
+            padding: 5px;
+            #social{
+                padding: 5px;
+                a{
+                    display: inline-block;
+                    color: #fff;
+                    font-size: 18px;
+                    padding: 5px 15px;
+                    transition: color 0.4s;
+                }
+                .facebook{
+                    &:hover{
+                        color: rgb(21, 95, 206);
+                    }
+                }
+                .twitter{
+                    &:hover{
+                        color: rgb(23, 174, 194);
+                    }
+                }
+                .instagram{
+                    &:hover{
+                        color: rgb(175, 8, 64);
+                    }
+                }
+            }
+            ul{
+                padding: 10px;
+                li{
+                    a{
+                        display: block;
+                        padding: 10px 15px;
+                        color: #fff;
+                        font-size: 13px;
+                        &:hover{
+                            color: #999;
+                        }
+                    }
+                }
+            }
+            p{
+                padding: 10px;
+            }
+        }
+    }
+}

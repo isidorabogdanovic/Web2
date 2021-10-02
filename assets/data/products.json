@@ -1,0 +1,223 @@
+[
+    {
+        "id":"1",
+        "slika":{
+            "src":"images/products/111.jpg",
+            "alt":"MacBook Pro"
+        },
+        "tip":"laptop računar",
+        "proizvodjac":"Apple",
+        "model":"MacBook Pro",
+        "ekran":{
+            "dijagonala":"13.3",
+            "rezolucija":"2560 x 1600"
+        },
+        "RAMmemorija":"8",
+        "procesor":"Intel® Core™ i5 Dual Core Processor 7360U",
+        "grafika":"Integrisana Intel Iris Plus 640",
+        "ocena":"8",
+        "cena":"200999.00",
+        "idKat":"1"
+    },
+    {
+        "id":"2",
+        "slika":{
+            "src":"images/products/112.jpg",
+            "alt":"MacBook Air"
+        },
+        "tip":"laptop računar",
+        "proizvodjac":"Apple",
+        "model":"MacBook Air",
+        "ekran":{
+            "dijagonala":"13.3",
+            "rezolucija":"1440 x 900"
+        },
+        "RAMmemorija":"8",
+        "procesor":"Intel® Core™ i5 Dual Core Processor 7360U",
+        "grafika":"Integrisana Intel HD 6000",
+        "ocena":"9.4",
+        "cena":"125999.00",
+        "idKat":"1"
+    },
+    {
+        "id":"3",
+        "slika":{
+            "src":"images/products/113.jpg",
+            "alt":"EliteBook 850 G5 - 3JX57EA"
+        },
+        "tip":"laptop računar",
+        "proizvodjac":"HP",
+        "model":"EliteBook 850 G5 - 3JX57EA",
+        "ekran":{
+            "dijagonala":"15.6",
+            "rezolucija":" 1920 x 1080"
+        },
+        "RAMmemorija":"8",
+        "procesor":"Intel® Core™ i5 Dual Core Processor 7200U",
+        "grafika":"Integrisana Intel HD 620",
+        "ocena":"9",
+        "cena":"145999.00",
+        "idKat":"2"
+    },
+    {
+        "id":"4",
+        "slika":{
+            "src":"images/products/114.jpg",
+            "alt":"IdeaPad 320-15 - 80XR018HYA "
+        },
+        "tip":"laptop računar",
+        "proizvodjac":"Lenovo",
+        "model":"IdeaPad 320-15 - 80XR018HYA ",
+        "ekran":{
+            "dijagonala":"15.6",
+            "rezolucija":"1366 x 768"
+        },
+        "RAMmemorija":"4",
+        "procesor":"Intel® Celeron® Dual Core Processor N3350",
+        "grafika":"Integrisana Intel HD 500 ",
+        "ocena":"7",
+        "cena":"29999.00",
+        "idKat":"4"
+    },
+    {
+        "id":"5",
+        "slika":{
+            "src":"images/products/115.jpg",
+            "alt":"255 G6 - 1WY13EA"
+        },
+        "tip":"laptop računar",
+        "proizvodjac":"HP",
+        "model":"255 G6 - 1WY13EA",
+        "ekran":{
+            "dijagonala":"15.6",
+            "rezolucija":"1366 x 768"
+        },
+        "RAMmemorija":"4",
+        "procesor":"AMD® Bristol Ridge APU Dual Core Processor E2-9000e",
+        "grafika":"Integrisana AMD Radeon R2",
+        "ocena":"8",
+        "cena":"34999.00",
+        "idKat":"2"
+    },
+    {
+        "id":"6",
+        "slika":{
+            "src":"images/products/116.jpg",
+            "alt":"15-bs156nm - 4UL05EA"
+        },
+        "tip":"laptop računar",
+        "proizvodjac":"HP",
+        "model":"15-bs156nm - 4UL05EA",
+        "ekran":{
+            "dijagonala":"15.6",
+            "rezolucija":"1366 x 768"
+        },
+        "RAMmemorija":"4",
+        "procesor":"Intel® Core™ i3 Dual Core Processor 5005U",
+        "grafika":"Integrisana Intel HD 5500",
+        "ocena":"9",
+        "cena":"39999.00",
+        "idKat":"2"
+    },
+    {
+        "id":"7",
+        "slika":{
+            "src":"images/products/117.jpg",
+            "alt":"Aspire ES1-572-3133 - NX.GD0EX.047"
+        },
+        "tip":"laptop računar",
+        "proizvodjac":"Acer",
+        "model":"Aspire ES1-572-3133 - NX.GD0EX.047",
+        "ekran":{
+            "dijagonala":"15.6",
+            "rezolucija":"1366 x 768"
+        },
+        "RAMmemorija":"4",
+        "procesor":"Intel® Core™ i3 Dual Core Processor 6006U",
+        "grafika":"Integrisana Intel HD 520",
+        "ocena":"9.4",
+        "cena":"49999.00",
+        "idKat":"5"
+    },
+    {
+        "id":"8",
+        "slika":{
+            "src":"images/products/118.jpg",
+            "alt":"IdeaPad 330-15IKB"
+        },
+        "tip":"laptop računar",
+        "proizvodjac":"Lenovo",
+        "model":"IdeaPad 330-15IKB",
+        "ekran":{
+            "dijagonala":"15.6",
+            "rezolucija":" 1920 x 1080"
+        },
+        "RAMmemorija":"4",
+        "procesor":"Intel® Core™ i3 Dual Core Processor 6006U",
+        "grafika":"Integrisana Intel HD 520",
+        "ocena":"8",
+        "cena":"41999.00",
+        "idKat":"4"
+    },
+    {
+        "id":"9",
+        "slika":{
+            "src":"images/products/119.jpg",
+            "alt":"Stream 11 Pro G4 EE"
+        },
+        "tip":"laptop računar",
+        "proizvodjac":"HP",
+        "model":"Stream 11 Pro G4 EE",
+        "ekran":{
+            "dijagonala":"11.6",
+            "rezolucija":"1366 x 768"
+        },
+        "RAMmemorija":"4",
+        "procesor":"Intel® Celeron® Quad Core Processor N3450",
+        "grafika":"Integrisana Intel HD 500",
+        "ocena":"9",
+        "cena":"48999.00",
+        "idKat":"2"
+    },
+    {
+        "id":"10",
+        "slika":{
+            "src":"images/products/120.jpg",
+            "alt":"Inspiron 15 3567 - NOT13031"
+        },
+        "tip":"laptop računar",
+        "proizvodjac":"Dell",
+        "model":"Inspiron 15 3567 - NOT13031",
+        "ekran":{
+            "dijagonala":"15.6",
+            "rezolucija":"1366 x 768"
+        },
+        "RAMmemorija":"8",
+        "procesor":"Intel® Core™ i3 Dual Core Processor 7020U",
+        "grafika":"Integrisana Intel HD 620",
+        "ocena":"8",
+        "cena":"49999.00",
+        "idKat":"3"
+    },
+    {
+        "id":"11",
+        "slika":{
+            "src":"images/products/121.jpg",
+            "alt":"Vostro 3568- NOT12967"
+        },
+        "tip":"laptop računar",
+        "proizvodjac":"Dell",
+        "model":"Vostro 3568- NOT12967",
+        "ekran":{
+            "dijagonala":"15.6",
+            "rezolucija":"1366 x 768"
+        },
+        "RAMmemorija":"4",
+        "procesor":"Intel® Core™ i3 Dual Core Processor 7020U",
+        "grafika":"Integrisana Intel HD 620",
+        "ocena":"8.5",
+        "cena":"59999.00",
+        "idKat":"3"
+    }
+
+]
